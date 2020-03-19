@@ -1,4 +1,4 @@
-import random, os, requests, json
+import random, os, requests, json, Functions
 
 os.system("cls")
 
@@ -8,13 +8,13 @@ a = "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=mult
 Frågor = requests.get(a).json()
 
 with open("bruh.json", encoding="utf-8") as txt:
-    dict_text = json.loads(txt.read())
+    score_list = json.loads(txt.read())
     txt.close()
 
-Namn = dict_text["name"]
-Fel = dict_text["wrong"]  # antal fel
-Rätt = dict_text["correct"]  # antal rätt
-Streaks = dict_text["streaks"]  # hur lång streak
+Namn = ""
+Fel = 0
+Rätt = 0
+Streaks = 0
 
 
 print("Hej " + Namn + ", du kommer få 30 frågor att svara på")
@@ -84,13 +84,12 @@ for i in a:
 
     os.system("cls")
 
-dict_text["correct"] = Rätt
-dict_text["wrong"] = Fel
-dict_text["streaks"] = Streaks
+dict_out = {"name": Namn, "correct": Rätt, "wrong": Fel, "streaks": Streaks}
 
+score_list.append(dict_out)
 
 txt = open("bruh.txt", "w")
-inp = json.dumps(dict_text)
+inp = json.dumps(score_list)
 txt.write(inp)
 txt.close()
 
