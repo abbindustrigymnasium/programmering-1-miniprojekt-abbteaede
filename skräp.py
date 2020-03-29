@@ -1,81 +1,38 @@
-# import random, os, requests, json
+import random, os, requests, json, Functions
 
+os.system("cls")
 
-# def Frågor():
-#     a = "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=multiple"
-#     Frågor = requests.get(a).json()
+# frågor_från_opentdb = Functions.Frågor(
+#     "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=multiple"
+# )
 
-# a = []
+with open("bruh.json", encoding="utf-8") as txt:
+    score_list = json.loads(txt.read())
+    txt.close()
 
-# def rightOrWrong():
-#     for i in Frågor["results"]:
-#     b= {}
-#     b["question"] = i["question"]
-#     svar = []
+Namn = ""
+Fel = 0
+Rätt = 0
+Streaks = 0
 
-#     svar.append([i["correct_answer"], 1])
+print("Hej " + Namn + ", du kommer få 30 frågor att svara på")
+input()
 
-#     for x in i["incorrect_answers"]:
-#         svar.append([x, 0])
+hej = Functions.Frågor(
+    "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=multiple"
+)
 
-#     b["answer"] = svar
+hejsan = Functions.rightOrWrong(hej)
 
-# random.shuffle(a)
+random.shuffle(hejsan)
 
-# def go(a):
-#     for i in a:
-#     b = i["answer"]
-#     random.shuffle(b)
-#     go = True
+tjoho = Functions.go(hejsan)
 
-#     while go:
-#         os.system("cls")
-#         Svar = input(
-#             "Fråga: "
-#             + i["question"]
-#             + "\n-----------------------------\n-Svars alternativ : 1="
-#             + b[0][0]
-#             + " 2="
-#             + b[1][0]
-#             + " 3="
-#             + b[2][0]
-#             + "\n>"
-#         )
-#         try:
-#             if b[int(Svar) - 1][1] == 1:
-#                 print("Rätt svar")
-#                 Rätt = Rätt + 1
-#                 Streaks = Streaks + 1
-#                 if (
-#                     Streaks == 5
-#                     or Streaks == 10
-#                     or Streaks == 15
-#                     or Streaks == 20
-#                     or Streaks == 25
-#                     or Streaks == 30
-#                 ):
-#                     print("Whoop Whoop din streak är nu " + str(Streaks) + "!")
-#                 go = False
+print(tjoho)
+# from FrågeBot import FrågeBot
 
-#             elif b[int(Svar) - 1][1] == 0:
-#                 print("Fel svar")
-#                 Fel = Fel + 1
-#                 Streaks = 0
-#                 go = False
+# Frågebot = FrågeBot(randomize=False, verbose=True) # Initiera frågebotten, randomisera svars alternativ                                                       # Skriv också ut om det bler rätt eller fel
+# Frågebot.loadConfig("frågor.json", file=True) # ladda frågor fån en fil (kan vara string eller dict också)
+# Frågebot.fråga(randomize=True) # Fråga alla fråga i slumpmässig ordning
+# Frågebot.finalscore() # visa slutresultat
 
-#         except:
-#             print("Vänligen välj ett av alternativen")
-#     input()
-
-#     os.system("cls")
-
-# def score():
-#     dict_text["correct"] = Rätt
-#     dict_text["wrong"] = Fel
-#     dict_text["streaks"] = Streaks
-
-
-#     txt = open("bruh.txt", "w")
-#     inp = json.dumps(dict_text)
-#     txt.write(inp)
-#     txt.close()
