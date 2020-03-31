@@ -33,10 +33,11 @@ def rightOrWrong(Frågor):
 
 
 def go(a):
+    print("he222jsan")
     for i in a:
         b = i["answer"]
         random.shuffle(b)
-        go = True
+        t = True
 
         while go:
             os.system("cls")
@@ -51,7 +52,9 @@ def go(a):
                 + b[2][0]
                 + "\n>"
             )
+            print("he222jsan")
             try:
+                print("hejsan")
                 if b[int(Svar) - 1][1] == 1:
                     print("Rätt svar")
                     Rätt = Rätt + 1
@@ -65,13 +68,13 @@ def go(a):
                         or Streaks == 30
                     ):
                         print("Whoop Whoop din streak är nu " + str(Streaks) + "!")
-                    go = False
+                    t = False
 
                 elif b[int(Svar) - 1][1] == 0:
                     print("Fel svar")
                     Fel = Fel + 1
                     Streaks = 0
-                    go = False
+                    t = False
 
             except:
                 print("Vänligen välj ett av alternativen")
