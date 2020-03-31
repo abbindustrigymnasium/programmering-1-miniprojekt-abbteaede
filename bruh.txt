@@ -1,1 +1,1 @@
-[{"name": "Thea", "correct": 12, "wrong": 2, "streaks": 2}, {"name": "", "correct": 11, "wrong": 19, "streaks": 0}]
+[{"name": "", "correct": 0, "wrong": 0, "streaks": 0}, {"name": "M\u00e4nniska", "correct": 6, "wrong": 24, "streaks": 0}]

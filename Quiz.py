@@ -11,7 +11,7 @@ with open("bruh.json", encoding="utf-8") as txt:
     score_list = json.loads(txt.read())
     txt.close()
 
-Namn = ""
+Namn = "Människa"
 Fel = 0
 Rätt = 0
 Streaks = 0
@@ -95,4 +95,3 @@ txt.close()
 
 
 print("You won with", Rätt, "correct answers and", Fel, "wrong answers.")
-
