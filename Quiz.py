@@ -14,6 +14,7 @@ with open("bruh.json", encoding="utf-8") as txt:
 Namn = "Människa"
 Fel = 0
 Rätt = 0
+
 Streaks = 0
 
 
