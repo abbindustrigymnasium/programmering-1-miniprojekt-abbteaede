@@ -1,5 +1,7 @@
 import random, os, requests, json, Functions
 
+# from Functions import *
+
 os.system("cls")
 
 a = "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=multiple"
@@ -7,9 +9,6 @@ a = "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=mult
 
 Frågor = requests.get(a).json()
 
-with open("bruh.json", encoding="utf-8") as txt:
-    score_list = json.loads(txt.read())
-    txt.close()
 
 Namn = "Människa"
 Fel = 0
@@ -28,9 +27,8 @@ for i in Frågor["results"]:
     svar = []
 
     svar.append([i["correct_answer"], 1])
-
     for x in i["incorrect_answers"]:
-            svar.append([x, 0])
+        svar.append([x, 0])
 
     b["answer"] = svar
 

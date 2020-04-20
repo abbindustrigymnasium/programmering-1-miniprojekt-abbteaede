@@ -7,16 +7,13 @@ a = "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=mult
 
 Frågor = requests.get(a).json()
 
-with open("bruh.json", encoding="utf-8") as txt:
-    score_list = json.loads(txt.read())
-    txt.close()
-
-Namn = "Människa"
+Namn = ""
 Fel = 0
 Rätt = 0
 
 Streaks = 0
 
+Namn = input("Skriv in ditt namn \n>")
 
 print("Hej " + Namn + ", du kommer få 30 frågor att svara på")
 input()
@@ -87,12 +84,9 @@ for i in a:
 
 dict_out = {"name": Namn, "correct": Rätt, "wrong": Fel, "streaks": Streaks}
 
-score_list.append(dict_out)
-
-txt = open("bruh.txt", "w")
-inp = json.dumps(score_list)
-txt.write(inp)
-txt.close()
+text_file = open("bruh.txt", "w")
+text_file.write(str(dict_out))
+text_file.close()
 
 
 print("You won with", Rätt, "correct answers and", Fel, "wrong answers.")
