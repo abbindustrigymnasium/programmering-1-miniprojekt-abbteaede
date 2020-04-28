@@ -1,1 +1,1 @@
-{'name': 'Tea', 'correct': 6, 'wrong': 24, 'streaks': 0}
+{'name': 'Tea', 'correct': 7, 'wrong': 23, 'streaks': 0}
