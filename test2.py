@@ -23,6 +23,7 @@ a = []
 
 for i in Frågor["results"]:
     b = {}
+
     b["question"] = i["question"]
     svar = []
 

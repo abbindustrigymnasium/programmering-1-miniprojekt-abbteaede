@@ -34,6 +34,7 @@ def rightOrWrong(Frågor):
 
 def go(a):
     print("he222jsan")
+    streaks = 0
     for i in a:
         b = i["answer"]
         random.shuffle(b)
