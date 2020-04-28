@@ -5,15 +5,28 @@ def rightOrWrong(Frågor):
     a = []  # skapar en lista
     for i in Frågor["results"]:  # Frågor är en lista med dictionarys som körs igenom
         b = {}  # skapar en dictionary med bara frågan och svaren
-        b["question"] = i["question"]
+        b["question"] = (
+            i["question"]
+            .replace("&quot;", "", 100000)
+            .replace("&#039;", "'", 100000)  # ändrar möjligatecken till de rätta
+        )
         svar = (
             []
         )  # Gör en lista där det läggs till 1 om svaret är rätt och 0 om svaret är fel
 
-        svar.append([i["correct_answer"], 1])
+        svar.append(
+            [
+                i["correct_answer"]
+                .replace("&quot;", "", 100000)
+                .replace("&#039;", "'", 100000),
+                1,
+            ]
+        )
 
         for x in i["incorrect_answers"]:
-            svar.append([x, 0])
+            svar.append(
+                [x.replace("&quot;", "", 100000).replace("&#039;", "'", 100000), 0]
+            )
 
         b["answer"] = svar  # lägger till svaren i dictionaryn b som en lista
 
@@ -26,6 +39,7 @@ def go(a):
     Streaks = 0  # definerar värden
     Rätt = 0
     Fel = 0
+    Highest_Streak = 0
 
     for i in a:  # för varje i listan
         b = i[
@@ -64,6 +78,10 @@ def go(a):
                         or Streaks == 30
                     ):
                         print("Whoop Whoop din streak är nu " + str(Streaks) + "!")
+                    if (
+                        Streaks > Highest_Streak
+                    ):  # för att ha reda på den högsta streaken
+                        Highest_Streak = Streaks
                     t = False  # sätter t som false för att köra nästa fråga
 
                 elif (
@@ -83,5 +101,5 @@ def go(a):
     return (
         Rätt,
         Fel,
-        Streaks,
+        Highest_Streak,
     )  # skickar tillbaka värdena när alla frågor har körts igenom

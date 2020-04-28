@@ -1,1 +1,0 @@
-{'name': 'Tea', 'correct': 7, 'wrong': 23, 'streaks': 0}

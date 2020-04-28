@@ -25,8 +25,8 @@ dict_out = {
     "streaks": Stats[2],
 }  # gör en lista med ens statistik
 
-text_file = open("bruh.txt", "w")  # skriver in dictionaryn i text filen
-text_file.write(str(dict_out))
+text_file = open("Scoreboard.txt", "a")  # skriver in dictionaryn i text filen
+text_file.write("\n" + str(dict_out))
 text_file.close()
 
 print("Du vann med", Stats[0], "rätta svar och", Stats[1], "fel svar.")
