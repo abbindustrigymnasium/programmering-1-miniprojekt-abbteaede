@@ -1,5 +1,4 @@
 {'name': 'Tea', 'correct': 5, 'wrong': 25, 'streaks': 2}
 {'name': 'Tea', 'correct': 8, 'wrong': 22, 'streaks': 2}
 {'name': 'Gustaf', 'correct': 6, 'wrong': 24, 'streaks': 2}
-
 {'name': 'Carl', 'correct': 6, 'wrong': 24, 'streaks': 2}
