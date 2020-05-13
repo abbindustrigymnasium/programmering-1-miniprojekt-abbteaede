@@ -6,3 +6,4 @@ Frågorna är hämtade ifrån en API som sedan kommer köras igenom. Det finns e
 När frågorna har körts igenom får man reda på antalet rätt och fel man hade och resultaten sparas i en text fil med ditt namn som du skriver in i början.
 
 # Hur det fungerar
+!
