@@ -7,6 +7,10 @@ När frågorna har körts igenom får man reda på antalet rätt och fel man had
 
 Frågorna är hämtade ifrån denna API "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=multiple"
 
+# Hur man kör det
+Om du inte redan har python kan du ladda ner det härifrån - https://www.python.org/downloads/
+
+För att starta programmet kan du trycka ner ctrl+alt+p för att komma till command line där du skriver "python" för att köra programmet.
 # Hur det fungerar
 ![Bild på systemet](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbteaede/blob/master/Quiz%20i%20steg.png)
 
