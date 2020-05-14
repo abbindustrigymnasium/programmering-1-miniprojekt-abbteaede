@@ -14,4 +14,5 @@ För att starta programmet kan du trycka ner ctrl+alt+p för att komma till comm
 # Hur det fungerar
 ![Bild på systemet](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbteaede/blob/master/Quiz%20i%20steg.png)
 
-# Om projektet
+Jag har valt att exportera funktionerna från Functions.py som en modul för att ha en organiserad kod. Highscoren sparas i en serperat text fil kallad scoreboard.txt.
+
