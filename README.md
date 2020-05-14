@@ -5,5 +5,9 @@ Frågorna är hämtade ifrån en API som sedan kommer köras igenom. Det finns e
 
 När frågorna har körts igenom får man reda på antalet rätt och fel man hade och resultaten sparas i en text fil med ditt namn som du skriver in i början.
 
+Frågorna är hämtade ifrån denna API "https://opentdb.com/api.php?amount=30&category=15&difficulty=hard&type=multiple"
+
 # Hur det fungerar
 ![Bild på systemet](https://github.com/abbindustrigymnasium/programmering-1-miniprojekt-abbteaede/blob/master/Quiz%20i%20steg.png)
+
+# Om projektet
